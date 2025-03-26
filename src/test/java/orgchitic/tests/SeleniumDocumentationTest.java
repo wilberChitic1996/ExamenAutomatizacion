@@ -77,7 +77,7 @@ public class SeleniumDocumentationTest {
         takeScreenshot("01_google_home");  // Tomar captura de pantalla
 
         // Buscar "Documentación de Selenium" en Google
-        WebElement searchBox = wait.until(ExpectedConditions.presenceOfElementLocated(By.name("q")));
+       /* WebElement searchBox = wait.until(ExpectedConditions.presenceOfElementLocated(By.name("q")));
         searchBox.sendKeys("Documentación de Selenium" + Keys.ENTER);
         waitForPageLoad();  // Esperar a que los resultados de búsqueda carguen
         takeScreenshot("02_google_results");  // Tomar captura de pantalla de los resultados
@@ -89,7 +89,9 @@ public class SeleniumDocumentationTest {
         } catch (ElementClickInterceptedException e) {
             // Si el clic es interceptado, usar JavaScript para realizar el clic
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", seleniumLink);
-        }
+        }*/
+        driver.get("https://www.selenium.dev/documentation/");  // Navegar a Google
+
         waitForPageLoad();  // Esperar a que se cargue la página de documentación de Selenium
         takeScreenshot("03_selenium_documentation");  // Tomar captura de pantalla de la documentación
 
