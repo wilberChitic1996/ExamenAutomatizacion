@@ -1,2 +1,2 @@
-rootProject.name = 'ExamenAutomatizacion'
-
+// Solo configuración del proyecto, NO plugins ni dependencias
+rootProject.name = 'ExamenAutomatizacion'  // Opcional: define el nombre del proyecto

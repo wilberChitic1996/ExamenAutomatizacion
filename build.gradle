@@ -2,18 +2,20 @@ plugins {
     id 'java'
 }
 
-group = 'org.example'
-version = '1.0-SNAPSHOT'
-
 repositories {
     mavenCentral()
+    maven { url "https://nexus.codehaus.org/content/repositories/releases/" }
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.30.0'
+    implementation 'io.github.bonigarcia:webdrivermanager:6.0.0'
+    testImplementation 'org.testng:testng:7.11.0'
+    implementation 'com.github.stephenc.monte:monte-screen-recorder:0.7.7.0'
+    implementation 'commons-io:commons-io:2.15.1'
+
 }
 
 test {
-    useJUnitPlatform()
+    useTestNG()
 }
